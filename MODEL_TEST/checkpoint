@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/deejey/Documents/ANN/DDoS/MODEL_TEST/model.ckpt"
+all_model_checkpoint_paths: "/home/deejey/Documents/ANN/DDoS/MODEL_TEST/model.ckpt"
