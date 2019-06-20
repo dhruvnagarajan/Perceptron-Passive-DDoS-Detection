@@ -26,23 +26,26 @@ Although depth of the model is similar to that of a perceptron, the width of the
 
 
 # Input
+
+> Input for `input tensor layer` matches the below format:
+
 4 nodes: [SOURCE IP] [DESTINATION IP] [SOURCE PORT] [DESTINATION PORT]
 
-> Touple in the input data set obviously match this format
+[SOURCE IP, DESTINATION IP] have been normalized:
+- Actual IP addresses have been obfuscated by the source dataset
+- Renormalization has been done to be able to train a model on IP addresses:
+`w * 1 + x * 2 + y * 3 + z * 4`, where `w.x.y.z` is an IP
 
-> IP Address has been normalized.
+> Recommend you to develop a better normalization technique for IP address.
 
 Output: 0 / 1, for isAttackPacket === true.
 
-## About the files
-Contain about 1 million UDP packets.
+## About files
 
-> Please use Notepad++ or Sublime to view the data set on Windows
+Dataset: 1 million UDP packets
 
-- raw_data_...txt: Attack and normal datasets taken from the internet
-- IPTrain_data_...txt: Data and label for training the model
-- test_data_...txt: Data and label for testing the trained model
-- MODEL_TEST: Saved model
+Files inside /Data\ Sets are self-explanatory.
+MODEL_TEST contains saved model.
 
 # License
 
